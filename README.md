@@ -863,7 +863,9 @@ class Store{
 
 **vuex能够记录每一次state的变化记录，保存状态快照，实现时间漫游／回滚之类的操作**。
 
-![](https://imgkr2.cn-bj.ufileos.com/5f56b9dc-75a0-40a0-a709-b54c4fbdab51.png?UCloudPublicKey=TOKEN_8d8b72be-579a-4e83-bfd0-5f6ce1546f13&Signature=ENBbzgXBCi3%252FK5ZB8z6%252FrxpTXWo%253D&Expires=1596256958)
+
+![](https://imgkr2.cn-bj.ufileos.com/8617ccd9-c389-4512-bd9c-a55f8e972a68.png?UCloudPublicKey=TOKEN_8d8b72be-579a-4e83-bfd0-5f6ce1546f13&Signature=yKwZcXm2glLeMFGVcaoF3dv6eXc%253D&Expires=1596423850)
+
 
 我有想到一件有意思的事情，要是说我们要实现一个最简单的Vuex，其实只实现state不就好了，其他的getter啊，action，commit都不实现。有种轻装上阵的感觉。其实也能实现。
 
