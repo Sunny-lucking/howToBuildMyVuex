@@ -1,6 +1,6 @@
 
 # 手写Vuex核心原理
-[toc]
+@[toc]
 ## 一、核心原理
 1. Vuex本质是一个对象
 2. Vuex对象有两个属性，一个是install方法，一个是Store这个类
@@ -12,14 +12,14 @@
 
 
 
-![](https://imgkr.cn-bj.ufileos.com/a46649f5-0198-4a6f-afc0-87888ece4214.png)
+![](https://imgconvert.csdnimg.cn/aHR0cHM6Ly9pbWdrci5jbi1iai51ZmlsZW9zLmNvbS9hNDY2NDlmNS0wMTk4LTRhNmYtYWZjMC04Nzg4OGVjZTQyMTQucG5n?x-oss-process=image/format,png)
 
 
 
 删除一些不必要的组建后项目目录暂时如下：
   
 
-![](https://imgkr.cn-bj.ufileos.com/0fe8c932-f60a-466c-b315-cf92edf536b6.png)
+![](https://imgconvert.csdnimg.cn/aHR0cHM6Ly9pbWdrci5jbi1iai51ZmlsZW9zLmNvbS8wZmU4YzkzMi1mNjBhLTQ2NmMtYjMxNS1jZjkyZWRmNTM2YjYucG5n?x-oss-process=image/format,png)
 
 
 >已经把项目放到 **github**：https://github.com/Sunny-lucking/howToBuildMyVuex  可以卑微地要个star吗。有什么不理解的或者是建议欢迎评论提出
@@ -77,7 +77,7 @@ new Vue({
 现在我们启动一下项目。看看项目初始化有没有成功。
 
 
-![](https://imgkr.cn-bj.ufileos.com/97d3da6c-355e-4ab0-a0b2-458d7203d2b5.png)
+![](https://imgconvert.csdnimg.cn/aHR0cHM6Ly9pbWdrci5jbi1iai51ZmlsZW9zLmNvbS85N2QzZGE2Yy0zNTVlLTRhYjAtYTBiMi00NThkNzIwM2QyYjUucG5n?x-oss-process=image/format,png)
 
 
 ok，没毛病，初始化成功。
@@ -87,7 +87,7 @@ ok，没毛病，初始化成功。
 目前目录如下
 
 
-![](https://imgkr.cn-bj.ufileos.com/c5d9add7-2432-4a75-a3a8-04183e31e787.png)
+![](https://imgconvert.csdnimg.cn/aHR0cHM6Ly9pbWdrci5jbi1iai51ZmlsZW9zLmNvbS9jNWQ5YWRkNy0yNDMyLTRhNzUtYTNhOC0wNDE4M2UzMWU3ODcucG5n?x-oss-process=image/format,png)
 
 
 再将Vuex引入 改成我们的myVuex
@@ -175,7 +175,7 @@ export default Vuex
 
 我们执行下项目，如果没报错，说明我们的假设没毛病。
 
-![](https://imgkr.cn-bj.ufileos.com/b57c96ba-434a-48c0-b4d6-31bb37773c67.png)
+![](https://imgconvert.csdnimg.cn/aHR0cHM6Ly9pbWdrci5jbi1iai51ZmlsZW9zLmNvbS9iNTdjOTZiYS00MzRhLTQ4YzAtYjRkNi0zMWJiMzc3NzNjNjcucG5n?x-oss-process=image/format,png)
 
 天啊，没报错。没毛病！
 
@@ -356,7 +356,7 @@ class Store{
 ```
 运行结果：
 
-![](https://imgkr.cn-bj.ufileos.com/12c86780-7af2-4de7-873f-6e410945eca1.png)
+![](https://imgconvert.csdnimg.cn/aHR0cHM6Ly9pbWdrci5jbi1iai51ZmlsZW9zLmNvbS8xMmM4Njc4MC03YWYyLTRkZTctODczZi02ZTQxMDk0NWVjYTEucG5n?x-oss-process=image/format,png)
 
 太赞了吧，怎么会这么简单。。。不敢相信。
 
@@ -408,7 +408,7 @@ class Store{
 这是ES6，的语法，有点类似于Object.defineProperty的get接口
 
 
-![](https://imgkr.cn-bj.ufileos.com/3f111d93-a639-4c55-83ae-20ae138fe986.png)
+![](https://imgconvert.csdnimg.cn/aHR0cHM6Ly9pbWdrci5jbi1iai51ZmlsZW9zLmNvbS8zZjExMWQ5My1hNjM5LTRjNTUtODNhZS0yMGFlMTM4ZmU5ODYucG5n?x-oss-process=image/format,png)
 成功实现。
 
 ## 七、实现getter
@@ -487,7 +487,7 @@ export default new Vuex.Store({
 ```
 
 
-![](https://imgkr.cn-bj.ufileos.com/36c615da-b5ea-4642-9706-fa701092c930.png)
+![](https://imgconvert.csdnimg.cn/aHR0cHM6Ly9pbWdrci5jbi1iai51ZmlsZW9zLmNvbS8zNmM2MTVkYS1iNWVhLTQ2NDItOTcwNi1mYTcwMTA5MmM5MzAucG5n?x-oss-process=image/format,png)
 
 完美。毫无事故。
 ## 八、实现mutation
@@ -540,7 +540,7 @@ this.$store.commit('incre',1)
 
 对，是这种形式的。可以看出store对象有commit这个方法。而commit方法触发了mutations对象中的某个对应的方法，因此我们可以给Store类添加commit方法
 
-```
+```js
 //myVuex.js
 class Store{
     constructor(options) {
@@ -603,7 +603,7 @@ class Store{
 </script>
 ```
 store/index.js
-```
+```js
 //store/index.js
 import Vue from 'vue'
 import Vuex from './myVuex'
@@ -630,7 +630,7 @@ export default new Vuex.Store({
 })
 ```
 
-![](https://imgkr.cn-bj.ufileos.com/86e41966-ee36-4c74-a775-72488742b22e.png)
+![](https://imgconvert.csdnimg.cn/aHR0cHM6Ly9pbWdrci5jbi1iai51ZmlsZW9zLmNvbS84NmU0MTk2Ni1lZTM2LTRjNzQtYTc3NS03MjQ4ODc0MmIyMmUucG5n?x-oss-process=image/format,png)
 
 运行成功。
 
@@ -689,7 +689,7 @@ class Store{
 }
 ```
 一毛一样，不过有一点需要解释下，就是这里为什么是传this进去。这个this代表的就是store实例本身
-![](https://imgkr.cn-bj.ufileos.com/1b687ca5-758b-477b-95b8-d0fbfd611bd8.png)
+![](https://imgconvert.csdnimg.cn/aHR0cHM6Ly9pbWdrci5jbi1iai51ZmlsZW9zLmNvbS8xYjY4N2NhNS03NThiLTQ3N2ItOTViOC1kMGZiZmQ2MTFiZDgucG5n?x-oss-process=image/format,png)
 这是因为我们使用actions是这样使用的：
 
 ```js
@@ -703,7 +703,7 @@ class Store{
 ```
 
 其实{commit} 就是对this，即store实例的解构
-![](https://imgkr.cn-bj.ufileos.com/2078ca5f-a1e4-4864-9f59-9e74cdc24586.png)
+![](https://imgconvert.csdnimg.cn/aHR0cHM6Ly9pbWdrci5jbi1iai51ZmlsZW9zLmNvbS8yMDc4Y2E1Zi1hMWU0LTQ4NjQtOWY1OS05ZTc0Y2RjMjQ1ODYucG5n?x-oss-process=image/format,png)
 。
 
 那我们来测试一下。
@@ -767,11 +767,11 @@ export default new Vuex.Store({
 })
 ```
 
-![](https://imgkr.cn-bj.ufileos.com/7abd90a5-b3f2-4b93-8624-eb129296a0bb.png)
+![](https://imgconvert.csdnimg.cn/aHR0cHM6Ly9pbWdrci5jbi1iai51ZmlsZW9zLmNvbS83YWJkOTBhNS1iM2YyLTRiOTMtODYyNC1lYjEyOTI5NmEwYmIucG5n?x-oss-process=image/format,png)
 
 oh my god，居然出错了，它这里错误 说的是执行到这里发现这里的this为undefined。
 
-![](https://imgkr.cn-bj.ufileos.com/99d8bb5a-54a1-42cf-9b88-a1fe9c9a6556.png)
+![](https://imgconvert.csdnimg.cn/aHR0cHM6Ly9pbWdrci5jbi1iai51ZmlsZW9zLmNvbS85OWQ4YmI1YS01NGExLTQyY2YtOWI4OC1hMWZlOWM5YTY1NTYucG5n?x-oss-process=image/format,png)
 
 不过，不对啊，我们在实现mutation的时候也执行到这里了啊，而且执行成功了啊。
 
@@ -855,7 +855,7 @@ class Store{
 再来测试
 
 
-![](https://imgkr.cn-bj.ufileos.com/0f8ef36a-c677-4ad2-89d7-80798d779721.png)
+![](https://imgconvert.csdnimg.cn/aHR0cHM6Ly9pbWdrci5jbi1iai51ZmlsZW9zLmNvbS8wZjhlZjM2YS1jNjc3LTRhZDItODlkNy04MDc5OGQ3Nzk3MjEucG5n?x-oss-process=image/format,png)
 
 完美收官！！！！
 
@@ -864,7 +864,6 @@ class Store{
 **vuex能够记录每一次state的变化记录，保存状态快照，实现时间漫游／回滚之类的操作**。
 
 
-![](https://imgkr2.cn-bj.ufileos.com/8617ccd9-c389-4512-bd9c-a55f8e972a68.png?UCloudPublicKey=TOKEN_8d8b72be-579a-4e83-bfd0-5f6ce1546f13&Signature=yKwZcXm2glLeMFGVcaoF3dv6eXc%253D&Expires=1596423850)
 
 
 我有想到一件有意思的事情，要是说我们要实现一个最简单的Vuex，其实只实现state不就好了，其他的getter啊，action，commit都不实现。有种轻装上阵的感觉。其实也能实现。
